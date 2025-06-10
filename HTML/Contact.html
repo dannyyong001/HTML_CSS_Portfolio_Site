@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/Contact.css">
+        <title>Contact</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="../HTML/Home.html" class="home-link">My Portfolio.</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../HTML/Home.html" class="nav-link">Home</a></li>
+                    <li><a href="../HTML/About.html" class="nav-link">About</a></li>
+                    <li><a href="../HTML/Projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="../HTML/Contact.html" class="nav-link active-link">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="head-sect">
+                <p>Contact me</p>
+            </section>
+            <section class="entire-sect">
+                <div class="contact-info">
+                    <div class="not-logos">
+                        <h2>Contact Information</h2>
+                        <p class="contact-pg">If you have any questions, feel free to get in touch with me</p>
+                        <div class="number-div">
+                            <img src="../LOGOS/icons8-phone-48.png" alt="phone">
+                            <p class="number-pg">+234 808 519 2220</p>
+                        </div>
+                        <div class="email-div">
+                            <img src="../LOGOS/icons8-email-48.png" alt="mail">
+                            <p class="email-pg">adeyemigbengadaniel1@gmail.com</p>
+                        </div>
+                        <div class="address-div">
+                            <img src="../LOGOS/icons8-google-maps-48.png" alt="location">
+                            <p class="address-pg">9, Olootu-Omoba Street, GRA, Sagamu, Ogun State.</p>
+                        </div>
+                    </div>
+                    <div class="logos">
+                        <a href="#"><img src="../LOGOS/icons8-facebook-48 (1).png" alt="facebook"></a>
+                        <a href="#"><img src="../LOGOS/icons8-discord-new-48.png" alt="discord"></a>
+                        <a href="#"><img src="../LOGOS/icons8-whatsapp-48.png" alt="whatsapp"></a>
+                        <a href="#"><img src="../LOGOS/icons8-instagram-48.png" alt="instagram"></a>
+                        <a href="#"><img src="../LOGOS/icons8-linkedin-48.png" alt="linkedin"></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="/submit-form-data" method="POST" target="_blank" autocomplete="off">
+                        <div class="name-div">
+                            <div class="fn-div">
+                                <label for="firstname">First name</label>
+                                <input type="text" class="firstname" name="firstname" id="firstname" placeholder="First name" required>
+                            </div>
+                            <div class="ln-div">
+                                <label for="lastname">Last name</label>
+                                <input type="text" class="lastname" name="lastname" id="lastname" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        <div class="email-div">
+                            <label for="email">Email</label>
+                            <input type="email" class="email" name="email" id="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="phonenumber-div">
+                            <label for="phonenumber">Phone number</label>
+                            <input type="tel" class="phonenumber" name="phonenumber" id="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="+(111)-222-333-4444" required>
+                        </div>
+                        <div class="message-div">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="enter your message..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
