@@ -45,12 +45,20 @@ header .main-nav{
     margin-right: 72px;
 }
 
+#nav-toggle{
+    display: none;
+}
+
 .main-nav ul{
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
     list-style-type: none;
+}
+
+#nav-toggle:checked ~ ul{
+    max-height: 200px;
 }
 
 .main-nav li{
@@ -114,4 +122,185 @@ main{
     text-align: center;
     font-size: 20px;
     font-style: italic;
+}
+
+/* Responsive Design */
+
+/* For smaller screen sizes */
+
+@media screen and (max-width:565px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1.6rem;
+    }
+    header .main-nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        height: 200px;
+        align-self: self-start;
+        margin-right: 20px;
+    }
+    header .main-nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        left: 60px;
+        width: 90px !important;
+        height: 150px;
+        justify-content: space-around;
+        align-self: flex-end;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.5);
+        max-height: 0;
+        overflow: hidden;
+        z-index: 999;
+        transition: max-height 0.25s ease-out;
+    }
+    header .main-nav .hamburger-icon{
+        margin-top: 13px;
+        height: 50px;
+        font-size: 25px;
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 40%; }
+    }
+    .welcome{
+        font-size: 50px;
+        text-align: center;
+        width: 280px;
+
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+    .intro{
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width:475px){
+    header .main-nav ul{
+        left: 15px;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 60%; }
+    }
+    .welcome{
+        font-size: 50px;
+        text-align: center;
+        width: 285px;
+
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+    .intro{
+        margin: auto 10px;
+    }
+}
+
+@media screen and (max-width:320px){
+    header{
+        height: 50px;
+    }
+    header h1{
+        font-size: 1.3rem;
+        margin-left: 20px;
+    }
+    header .main-nav .hamburger-icon{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    header .main-nav ul{
+        left: 14px;
+        top: 40px;
+    }
+    .welcome{
+        font-size: 40px;
+        width: 195px;
+    }
+}
+    
+/* For larger screen sizes */
+
+@media screen and (min-width:566px){
+    .hamburger-icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px){
+    header h1{
+        font-size: 1.9rem;
+    }
+    header .main-nav{
+        margin-right: 20px;
+    }
+    header .main-nav ul{
+        width: 320px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    header .main-nav li{
+        margin: 0;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 42%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+}
+
+@media screen and (max-width:740px){
+    header .main-nav{
+        margin-right: 18px;
+    }
+    header .main-nav ul{
+        width: 270px;
+        margin-left: 10px;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 53%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+}
+
+@media screen and (max-width:640px){
+    header h1{
+        font-size: 1.5rem;
+    }
+    header .main-nav{
+        margin-right: 18px;
+    }
+    header .main-nav ul{
+        width: 220px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 63%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
 }
