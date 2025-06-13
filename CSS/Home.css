@@ -126,6 +126,83 @@ main{
 
 /* Responsive Design */
 
+/* For larger screen sizes */
+
+@media screen and (min-width:566px){
+    .hamburger-icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px){
+    header h1{
+        font-size: 1.9rem;
+    }
+    header .main-nav{
+        margin-right: 20px;
+    }
+    header .main-nav ul{
+        width: 280px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    header .main-nav li{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:900px){
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 42%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+}
+
+@media screen and (max-width:740px){
+    header h1{
+        font-size: 1.3rem;
+    }
+    header .main-nav{
+        margin-right: 18px;
+    }
+    header .main-nav ul{
+        width: 250px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 53%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+}
+
+@media screen and (max-width:640px){
+    header h1{
+        font-size: 1.5rem;
+    }
+    header .main-nav{
+        margin-right: 18px;
+    }
+    header .main-nav ul{
+        width: 220px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    @keyframes typingAnimation {
+    from { width: 0; }
+    to { width: 63%; }
+    }
+    .welcome{
+    animation: typingAnimation 0.75s ease-out 1;
+    }
+}
+
 /* For smaller screen sizes */
 
 @media screen and (max-width:565px){
@@ -153,13 +230,13 @@ main{
         align-items: center;
         position: absolute;
         top: 50px;
-        left: 60px;
-        width: 90px !important;
+        left: 48px;
+        width: 80px;
         height: 150px;
         justify-content: space-around;
         align-self: flex-end;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
         background-color: rgba(255, 255, 255, 0.5);
         max-height: 0;
         overflow: hidden;
@@ -195,7 +272,19 @@ main{
 
 @media screen and (max-width:475px){
     header .main-nav ul{
-        left: 15px;
+        left: 10px;
+        top: 45px;
+    }
+    header{
+        height: 50px;
+    }
+    header h1{
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+    header .main-nav .hamburger-icon{
+        font-size: 18px;
+        margin-right: 10px;
     }
     @keyframes typingAnimation {
     from { width: 0; }
@@ -213,94 +302,16 @@ main{
     }
 }
 
-@media screen and (max-width:320px){
-    header{
-        height: 50px;
+@media screen and (max-width:375px){
+    header .main-nav ul{
+        left: 5px;
     }
     header h1{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         margin-left: 20px;
-    }
-    header .main-nav .hamburger-icon{
-        font-size: 18px;
-        margin-right: 10px;
-    }
-    header .main-nav ul{
-        left: 14px;
-        top: 40px;
     }
     .welcome{
         font-size: 40px;
         width: 195px;
-    }
-}
-    
-/* For larger screen sizes */
-
-@media screen and (min-width:566px){
-    .hamburger-icon{
-        display: none;
-    }
-}
-
-@media screen and (max-width:900px){
-    header h1{
-        font-size: 1.9rem;
-    }
-    header .main-nav{
-        margin-right: 20px;
-    }
-    header .main-nav ul{
-        width: 320px;
-        margin-left: 10px;
-        font-size: 15px;
-    }
-    header .main-nav li{
-        margin: 0;
-    }
-    @keyframes typingAnimation {
-    from { width: 0; }
-    to { width: 42%; }
-    }
-    .welcome{
-    animation: typingAnimation 0.75s ease-out 1;
-    }
-}
-
-@media screen and (max-width:740px){
-    header .main-nav{
-        margin-right: 18px;
-    }
-    header .main-nav ul{
-        width: 270px;
-        margin-left: 10px;
-    }
-    @keyframes typingAnimation {
-    from { width: 0; }
-    to { width: 53%; }
-    }
-    .welcome{
-    animation: typingAnimation 0.75s ease-out 1;
-    }
-}
-
-@media screen and (max-width:640px){
-    header h1{
-        font-size: 1.5rem;
-    }
-    header .main-nav{
-        margin-right: 18px;
-    }
-    header .main-nav ul{
-        width: 220px;
-        margin-left: 10px;
-        font-size: 14px;
-    }
-    @keyframes typingAnimation {
-    from { width: 0; }
-    to { width: 63%; }
-    }
-    .welcome{
-    animation: typingAnimation 0.75s ease-out 1;
     }
 }
