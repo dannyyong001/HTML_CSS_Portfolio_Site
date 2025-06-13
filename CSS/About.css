@@ -45,6 +45,14 @@ header .main-nav{
     margin-right: 72px;
 }
 
+header #nav-toggle{
+    display: none;
+}
+
+#nav-toggle:checked ~ ul{
+    max-height: 200px;
+}
+
 .main-nav ul{
     margin: 0;
     padding: 0;
@@ -104,11 +112,12 @@ main .img-sect{
     height: 100%;
     margin: 0 20px;
     overflow: hidden;
+    width: 200px;
 }
 
 main .img-sect img{
     height: 100%;
-    width: 200px;
+    width: 100%;
     border-radius: 3px;
     transition: transform 0.4s ease-out;
 }
@@ -143,4 +152,202 @@ main .info-sect p{
     margin: 0;
     line-height: 1.5rem;
     opacity: 0.65;
+}
+
+
+/* Responsive Design */
+    
+/* For larger screen sizes */
+
+@media screen and (min-width:566px){
+    .hamburger-icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px){
+    header h1{
+        font-size: 1.9rem;
+    }
+    header .main-nav{
+        margin-right: 20px;
+    }
+    header .main-nav ul{
+        width: 280px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    header .main-nav li{
+        margin: 0;
+    }
+    main{
+        margin: 0 20px;
+        overflow-x: hidden;
+    }
+    main .full-sect{
+    width: 750px;
+    height: 350px;
+    padding: 10px;
+    }
+}
+
+@media screen and (max-width:850px){
+    main .full-sect{
+        width: 650px;
+    }
+}
+
+@media screen and (max-width:740px){
+    header h1{
+        font-size: 1.3rem;
+    }
+    header .main-nav{
+        margin-right: 18px;
+    }
+    header .main-nav ul{
+        width: 250px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    main .full-sect{
+        flex-direction: column;
+        position: relative;
+        width: 450px;
+        height: 400px;
+    }
+    main .img-sect{
+        position: absolute;
+        left: 0;
+        top: 10px;
+        height: 200px;
+    }
+    main .info-sect{
+        align-items: end;
+        padding-top: 70px;
+    }
+    main .info-sect p,
+    main .info-sect h2,
+    main .info-sect h4{
+        align-self: center;
+    }
+    main .info-sect h4{
+        font-size: 12px;
+        margin-left: 200px;
+    }
+    main .info-sect h2{
+        font-size: 32px;
+        margin-left: 140px;
+    }
+    main .info-sect p{
+        margin-top: 40px;
+        width: 450px;
+    }
+}
+
+/* For smaller screen sizes */
+
+@media screen and (max-width:565px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1.6rem;
+    }
+    header .main-nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        height: 200px;
+        align-self: self-start;
+        margin-right: 20px;
+    }
+    header .main-nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        left: 48px;
+        width: 80px;
+        height: 150px;
+        justify-content: space-around;
+        align-self: flex-end;
+        border-radius: 10px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        background-color: rgba(255, 255, 255, 0.5);
+        max-height: 0;
+        overflow: hidden;
+        z-index: 999;
+        transition: max-height 0.25s ease-out;
+    }
+    header .main-nav .hamburger-icon{
+        margin-top: 13px;
+        height: 50px;
+        font-size: 25px;
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    main .full-sect{
+        width: 300px;
+        height: 670px;
+    }
+    main .img-sect{
+        top: 15px;
+        width: 280px;
+        height: 250px;
+    }
+    main .info-sect{
+        align-items: center;
+        padding-top: 270px;
+    }
+    main .info-sect h4{
+        margin: 0;
+        font-size: 14px;
+    }
+    main .info-sect h2{
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    main .info-sect p{
+        padding-right: 10px;
+        width: 290px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:475px){
+    header .main-nav ul{
+        left: 10px;
+        top: 45px;
+    }
+    header{
+        height: 50px;
+    }
+    header h1{
+        font-size: 1.5rem;
+        margin-left: 20px;
+    }
+    header .main-nav .hamburger-icon{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:375px){
+    header .main-nav ul{
+        left: 5px;
+    }
+    header h1{
+        font-size: 1.1rem;
+    }
+    main{
+        overflow: visible;
+    }
 }
