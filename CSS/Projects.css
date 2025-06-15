@@ -203,7 +203,8 @@ main .project-list p{
     header .main-nav li{
         margin: 0;
     }
-    main{overflow-x: hidden;
+    main{
+        overflow-x: hidden;
     }
     main .project-list .Project-1,
     main .project-list .Project-2,
